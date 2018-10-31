@@ -71,10 +71,7 @@ serviceCreator.service("ServiceService", [
 
     this.setObjectModel = function(nameObjectModel) {
         console.log("Se setea nombre del modelo");
-        console.log("Actualmente vacio");
-        console.log(this.objectModel);
         this.objectModel = nameObjectModel;
-        console.log("Ahora ya no..");
         console.log(this.objectModel);
     };
 
@@ -416,8 +413,6 @@ serviceCreator.service("ServiceService", [
     };
 
     this.getCurrentObjectsForProduct = function() {
-        console.log($service.products[this.currentProduct]);
-        console.log($service.products[this.currentProduct].createdObjects);
         return ($service.products[this.currentProduct].createdObjects);
     };
 

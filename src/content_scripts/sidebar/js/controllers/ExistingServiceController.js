@@ -131,13 +131,6 @@ serviceCreator.controller('ExistingServiceController', function($scope, $state, 
       : product.class;
 
     listItem.setAttribute("productId", product.class);
-    //listItem.onclick = function() {
-    //  ServiceService.setCurrentServiceKey(service.name).then(function() {
-    //    ServiceService.setBuildingStrategy("ExistingServiceEdition").then(function() {
-    //      $state.go('ServiceName'); //do not call loadNext
-    //    });
-    //  });
-    //};
 
     const removeButton = document.createElement("button");
     removeButton.className = "btn btn-default btn-list";
@@ -157,16 +150,6 @@ serviceCreator.controller('ExistingServiceController', function($scope, $state, 
     addButton.innerHTML = "<i class='glyphicon glyphicon-plus'></i>";
     addButton.onclick = function(evt) {
 
-      //ServiceService.setCurrentProduct(control.parentElement.getAttribute("productId"));
-      //console.log(ServiceService.getCurrentProduct());
-      //$scope.undoActionsOnDom();
-      //ServiceService.setObjectModel(control.parentElement.getAttribute("productId"));
-      //ServiceService.setCurrentServiceKey(control.parentElement.getAttribute("productId"));
-      //ServiceService.setName(control.parentElement.getAttribute("productId")).then(function() {
-      //ServiceService.updateServices();
-      //  browser.runtime.sendMessage({call: "populateApisMenu"});
-      //});
-      //$state.go('SelectProductProperties');
       const control = this;
       ServiceService.setCurrentProduct(control.parentElement.getAttribute("productId"));
       console.log(ServiceService.getCurrentProduct());

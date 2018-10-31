@@ -11,11 +11,9 @@ class Sidebar {
     showProductComments(message) {
         console.log(message);
         var elem = (new XPathInterpreter()).getSingleElementByXpath(message.xpath, document);
-        console.log(elem);
         var iframe = document.createElement("iframe");
         iframe.src ="https://www.google.com";
         elem.append(iframe);
-        //document.getElementsByClassName("informatica-compra-al-mejor-precio-en-fravega-com").append(message);
     }
 
 	toggle () {
@@ -236,16 +234,7 @@ class ClosedSidebar extends SidebarStatus{
 
 /////////////////////////////////////////////
 var sidebar = new Sidebar();
-console.log("PPPP JOAQUIN");
-//$(".informatica-compra-al-mejor-precio-en-fravega-com").append("<iframe src='https://www.w3schools.com'></iframe>");
-//$(".informatica-compra-al-mejor-precio-en-fravega-com").append("<h1>HOLA!!!!</h1>");
 
-
-
-//var images = document.getElementsByTagName('img');
-//      for (var i = 0, l = images.length; i < l; i++) {
-//        images[i].src = 'http://placekitten.com/' + images[i].width + '/' + images[i].height;
-//      }
 browser.runtime.onMessage.addListener(function callSidebarActions(request, sender) {
 
     console.log("SIDEBAR.JS");

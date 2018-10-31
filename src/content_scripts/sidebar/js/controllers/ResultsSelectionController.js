@@ -79,7 +79,6 @@ serviceCreator.controller('ResultsSelectionController', function($scope, $state,
 
     var select = document.querySelector("#result-selector");
     select.innerHTML = "";
-    console.log("JOAQUIN SELECTORS");
     console.log(selectors);
     ServiceService.setCurrentXPath(selectors[1][0]);
 

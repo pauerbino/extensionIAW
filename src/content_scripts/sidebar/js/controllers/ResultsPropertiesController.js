@@ -11,7 +11,7 @@ serviceCreator.controller('ResultsPropertiesController', function($scope, $http,
     ServiceService.getService().then(function(service) {
 
       $scope.service = service;
-      console.log("loadDataModel!!!");
+      console.log("loadDataModel");
       console.log(service.results);
       var selector = $scope.getElementsSelector(service.results.selector.value);
       $scope.loadPropertiesIntoSidebar($scope.service.results.properties);
@@ -113,13 +113,7 @@ serviceCreator.controller('ResultsPropertiesController', function($scope, $http,
   };
 
   $scope.saveDataModel = function() {
-    console.log("SELECCIONE TODAS LAS PROPERTIES Y DI SAVE, LLAMO A saveDataModel");
-    console.log("Begin Joaquin");
-    console.log("Pre $scope.service.results.properties");
-    console.log($scope.service.results.properties);
     $scope.service.results.properties = $scope.getUserEditedProperties();
-    console.log("Post seteo");
-    console.log($scope.service.results.properties);
     $scope.sendDataModel($scope.service.results.properties);
     ServiceService.setProperties($scope.service.results.properties).then(function() {
       ServiceService.updateServices();
@@ -127,7 +121,6 @@ serviceCreator.controller('ResultsPropertiesController', function($scope, $http,
   };
 
   $scope.sendDataModel = function(model) {
-    console.log("Codigo joaquin, nueva funcion");
     console.log(model);
     var nameAbstractModel = ServiceService.getObjectModel();
     var productXPath = ServiceService.getCurrentXPath();
@@ -195,8 +188,6 @@ serviceCreator.controller('ResultsPropertiesController', function($scope, $http,
     Object.keys(properties).forEach(function(key) {
       $scope.addPropertyToSidebar(properties[key]);
     });
-    console.log("LLAME AL loadPropertiesIntoSidebar")
-    console.log(properties);
   };
 
   $scope.highlightPropertyInDom = function(relativeSelector, refElemSelector) {
