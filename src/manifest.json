@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Logikós templates creator",
+  "name": "MDWA Collector",
   "version": "1.0",
   "description": "...",
   "homepage_url": "https://sites.google.com/view/logikos/accueil",
@@ -10,7 +10,7 @@
     "default_icon": {
       "64": "resources/img/logo-disabled-64.png"
     },
-    "default_title": "Logikós templates creator",
+    "default_title": "MDWA Collector",
     "browser_style": true
   },
 
