@@ -421,6 +421,7 @@ serviceCreator.service("ServiceService", [
         var className = $service.products[this.currentProduct].class;
         var method = 'insertOneIn' + className;
         var ejResponse = {'status': 'ok', 'comment': 'Prueba'};
+        var data = $service.products[this.currentProduct].createdObjects[0];
         console.log(method);
         console.log($service.products[this.currentProduct].createdObjects[0]);
         this.storage.get("config").then(function setCurrentChoice(result) {
@@ -430,7 +431,7 @@ serviceCreator.service("ServiceService", [
                 action: 'xhttp',
                 url: apiUrl + 'render/' + method,
                 headers: {'ContentType': 'application/json'},
-                data: $service.products[this.currentProduct].createdObjects[0]
+                data: data
             }).then(response => {
                 console.log(response);
                 ejResponse = response;
