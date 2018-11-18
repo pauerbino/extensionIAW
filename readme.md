@@ -1,5 +1,7 @@
 # About the project #
 
+MDWA Collector is a chrome web extesion based on Logikós.
+
 Logikós is a decision support system integrated to the Web. It is composed by different extensions.
 
 In this repo you can find the implementation of the templates editor: an extension allowing the definition of templates that can be shared among users and used to easily extract information items from any annotated Web site, by using the [Items Extractor](https://bitbucket.org/logikos-web/items-collector) extension.
@@ -12,7 +14,7 @@ In this repo you can find the implementation of the templates editor: an extensi
 ## Building the extension ##
 
 Clone this repo:
-git clone https://gabybosetti@bitbucket.org/logikos-web/templates-editor.git
+git clone https://github.com/pauerbino/extensionIAW.git
 
 Download the dependencies:
 cd ./templates-editor
@@ -33,7 +35,7 @@ You can debug and see logs from the Webconsole and the Browser's console. It dep
 To define a new template:
 
 1. Open a document. E.g. an [ResearchGate article]{https://www.researchgate.net/publication/317540149_From_Search_Engines_to_Augmented_Search_Services_An_End-User_Development_Approach}
-2. Press the "Logikós template editor".
+2. Press the "MDWA Collector".
 3. Press "new template"
 4. Choose a name for the template. E.g. ResearchGate article
 5. Click next
@@ -51,7 +53,8 @@ To receive the comments associated to a defined template and object:
 3. Press the "+" button over the product for which you would like to get its comments.
 4. The comments will appear under the product in the page.
 
-In order to enable this last functionality related to the objects defined in a page through the web extension,
-it is required to have the following repository in the computer where the web extension is going to run: https://github.com/francomahl/sswmfa.
-This server must be up andn running when using the extension. Futhermore, the link to this server must be defined
-in the web extension options in the field "API URL" so that the extension knows where to get the comments of a certain product.
+In order to enable this last functionality, it is required to have the following repository in the
+computer where the web extension is going to run: https://github.com/francomahl/sswmfa.
+This server must be up and running when using the extension. Futhermore, the link to this server must be defined
+in the web extension options in the field "API URL" so that the extension knows where to send the products and
+get its comments.
